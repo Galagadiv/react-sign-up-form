@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../components/Input";
 import "./signin.css";
 
-export default function SignIn() {
+export default function SignIn({signInWithGoogle}) {
 	return (
 		<div className="field">
 			<form className="form">
@@ -20,7 +20,9 @@ export default function SignIn() {
 					placeholder="Repeat password"
 					ID="user_pass_second"
 				/>
-				<button className="button">Click</button>
+				<button className="button" onClick={signInWithGoogle}>
+					Sign Up
+				</button>
 			</form>
 		</div>
 	);
