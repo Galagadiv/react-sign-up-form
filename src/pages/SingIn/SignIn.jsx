@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../logic/firebase";
-import Input from "../components/Input";
+import {auth} from "../../logic/firebase";
+import Input from "../../components/Input";
 import "./signin.css";
 
 export default function SignIn() {
@@ -23,7 +23,7 @@ export default function SignIn() {
 
 	return (
 		<div className="field">
-			<form className="form">
+			<form className="form" onSubmit={handleLog}>
 				<h1>Sign In</h1>
 				<Input
 					type="email" // Виправлено type
@@ -41,9 +41,13 @@ export default function SignIn() {
 					value={password}
 					setValue={setPass}
 				/>
-				<button className="button" onClick={handleLog}>
+				<button className="button" type="submit">
 					Sign In
 				</button>
+				<div className="link-bar">
+					<a href="/forgot-password">Forgot password?</a>
+					<a href="/sign-up">Sign up</a>
+				</div>
 			</form>
 		</div>
 	);
