@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "sobol24918"
-  }
+    "default": "reactauthv2",
+    "ReactAuthFormV2": "reactauthv2"
+  },
+  "targets": {},
+  "etags": {}
 }

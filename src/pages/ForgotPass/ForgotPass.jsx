@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Input from "../../components/Input";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {sendPasswordResetEmail} from "firebase/auth";
 import {auth} from "../../logic/firebase";
 
@@ -42,8 +42,8 @@ export default function ForgotPass() {
 					Send email
 				</button>
 				<div className="link-bar">
-					<a href="/sign-up">Sign up</a>
-					<a href="/">Sign in</a>
+					<Link to="/sign-up">Sign up</Link>
+					<Link to="/">Sign in</Link>
 				</div>
 			</form>
 		</div>

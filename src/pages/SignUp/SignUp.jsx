@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Input from "../../components/Input";
 import "./signup.css";
 
@@ -32,7 +32,7 @@ export default function SignUp() {
 					if (user.emailVerified) {
 						clearInterval(interval);
 						await signInWithEmailAndPassword(auth, email, password);
-						navigate("/Home"); // Перенаправляємо користувача
+						navigate("/home"); // Перенаправляємо користувача
 					}
 				}, 3000);
 			} else {
@@ -76,8 +76,8 @@ export default function SignUp() {
 						Sign Up
 					</button>
 					<div className="link-bar">
-						<a href="/forgot-password">Forgot password?</a>
-						<a href="/">Sign in</a>
+						<Link to="/forgot-password">Forgot password?</Link>
+						<Link to="/">Sign in</Link>
 					</div>
 				</form>
 			</div>

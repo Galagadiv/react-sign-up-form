@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../logic/firebase";
 import Input from "../../components/Input";
+import {Link} from "react-router-dom";
 import "./signin.css";
 
 export default function SignIn() {
@@ -15,7 +16,7 @@ export default function SignIn() {
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
 			console.log("Користувач увійшов!");
-			navigate("/Home"); // Перехід на сторінку після входу
+			navigate("/home"); // Перехід на сторінку після входу
 		} catch (error) {
 			console.error("Помилка входу:", error.message);
 		}
@@ -45,8 +46,8 @@ export default function SignIn() {
 					Sign In
 				</button>
 				<div className="link-bar">
-					<a href="/forgot-password">Forgot password?</a>
-					<a href="/sign-up">Sign up</a>
+					<Link to="/forgot-password">Forgot password?</Link>
+					<Link to="/sign-up">Sign up</Link>
 				</div>
 			</form>
 		</div>
