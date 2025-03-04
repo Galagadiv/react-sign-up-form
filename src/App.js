@@ -1,22 +1,22 @@
 import "./assets/styles/common.css";
 import "./assets/styles/reset.css";
-import {signInWithPopup, GoogleAuthProvider} from "firebase/auth";
-import {auth} from "./logic/firebase";
+import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import React from "react";
 
-const provider = new GoogleAuthProvider();
-
-const signInWithGoogle = async () => {
-	try {
-		const result = await signInWithPopup(auth, provider);
-		console.log("User info:", result.user);
-	} catch (error) {
-		console.error("Error during sign-in:", error);
-	}
-};
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
-	return <SignIn signInWithGoogle={signInWithGoogle} />;
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<SignIn />} />
+				<Route path="/sign-up" element={<SignUp />} />
+				<Route path="/home" element={<Home />} />
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;

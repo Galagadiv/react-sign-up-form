@@ -1,0 +1,22 @@
+.field {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100dvh;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 500px;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	gap: 10px;
+}
+.button {
+	width: 100%;
+}
