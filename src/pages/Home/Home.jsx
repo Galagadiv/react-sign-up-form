@@ -56,7 +56,7 @@ export default function Home() {
 					</header>
 					<main>
 						<section>
-							<form onSubmit={{}} className="home__form">
+							<form onSubmit={handleSaveNote} className="home__form">
 								<button className="button" type="submit">
 									Save
 								</button>
