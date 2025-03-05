@@ -1,7 +1,10 @@
 {
-	"hosting": {
-		"site": "reactauthv3",
-		"public": "public",
-		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-	}
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
 }

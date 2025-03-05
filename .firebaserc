@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "reactauthv2",
+    "default": "reactauthformv3",
     "ReactAuthFormV2": "reactauthv2"
   },
   "targets": {},
